@@ -1,7 +1,7 @@
 # Programming Languages
 
 
-### Course Outline
+### Subject Outline
 This is a course designed to teach the main concepts of Object-Oriented Programming (OOP) using the Java programming language. The students will learn through concrete programming problems, the main paradigms of object-oriented programming such as objects, abstraction, classes, inheritance, and polymorphism. The student, after completing this course, will be able to:
 
 * Become familiar with the fundamental concepts of object-oriented programming.
@@ -21,5 +21,6 @@ This is a course designed to teach the main concepts of Object-Oriented Programm
 * Use OOP concepts such as inheritance and polymorphism.
 * Acquire hands-on experience of Java “flavored” OOP.
 * Develop a problem solving approach to meet the software programming needs of people in general with critical thinking and teamwork.
+
 
 
