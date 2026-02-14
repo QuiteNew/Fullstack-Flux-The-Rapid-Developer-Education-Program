@@ -1,0 +1,241 @@
+### Midterm Assignment 1: Basic Java Program (15 Points)
+
+**Objective**: Create a simple Java program, handle inputs, and use basic conditionals.
+
+**Task**:
+Write a Java program that calculates and categorizes a student’s score in a test.
+
+1. **Input**:
+    - Accept three scores from the user, each between 0 and 100.
+
+2. **Process**:
+    - Calculate the average score.
+    - Categorize performance based on the average score:
+        - `Excellent` for average ≥ 85
+        - `Good` for 70 ≤ average < 85
+        - `Average` for 50 ≤ average < 70
+        - `Poor` for average < 50
+
+3. **Output**:
+    - Display the calculated average and the performance category.
+
+---
+
+### **Assignment 1 Output Sample**
+
+Suppose the user inputs three scores: 78, 82, and 90.
+
+**Output**:
+```plaintext
+Enter score for Test 1: 78
+Enter score for Test 2: 82
+Enter score for Test 3: 90
+
+Average Score: 83.33
+Performance: Good
+```
+
+If the user inputs 50, 60, and 40:
+
+**Output**:
+```plaintext
+Enter score for Test 1: 50
+Enter score for Test 2: 60
+Enter score for Test 3: 40
+
+Average Score: 50.0
+Performance: Average
+```
+
+---
+
+### Midterm Assignment 2: Object-Oriented Program with Array of Objects (25 Points)
+
+This assignment has two parts, focusing on creating classes, using arrays of objects, and basic object interaction.
+
+#### Part (a) – Book Class and Library Class (10 Points)
+
+1. Create a `Book` class with attributes:
+    - `title` (String)
+    - `author` (String)
+    - `price` (double)
+
+2. In a `Library` class, add:
+    - A `Book[] books` array to store multiple book instances.
+    - `addBook(Book book)`: Method to add a book to the array.
+    - `displayAllBooks()`: Method to display all books in the library.
+
+3. **Demonstration**:
+    - Prompt the user to enter details for three books.
+    - Display all entered book details.
+
+#### Part (b) – Searching and Sorting (15 Points)
+
+1. **Search Method**:
+    - Add `findBooksByAuthor(String author)` to `Library` to search and print books by a specific author.
+
+2. **Sorting Method**:
+    - `sortBooksByPrice()`: Sorts books by price in ascending order.
+    - Display the list before and after sorting.
+
+3. **Example Output**:
+    - Allow the user to enter an author’s name to search for matching books.
+    - Display books sorted by price before and after calling `sortBooksByPrice()`.
+
+---
+
+### **Assignment 2 Output Sample**
+
+This assignment has two parts, (a) and (b), and includes `Book` and `Library` classes with methods to display all books, search by author, and sort by price.
+
+---
+
+#### **Assignment 2 - Part (a) Output**
+
+Suppose the user enters details for three books as follows:
+
+1. **Book 1**:
+    - Title: Java Programming Basics
+    - Author: Alice Brown
+    - Price: 29.99
+
+2. **Book 2**:
+    - Title: Advanced Java
+    - Author: John Smith
+    - Price: 39.99
+
+3. **Book 3**:
+    - Title: Data Structures in Java
+    - Author: Alice Brown
+    - Price: 19.99
+
+After calling `displayAllBooks()`:
+
+**Output**:
+```plaintext
+Book 1:
+Title: Java Programming Basics
+Author: Alice Brown
+Price: 29.99
+
+Book 2:
+Title: Advanced Java
+Author: John Smith
+Price: 39.99
+
+Book 3:
+Title: Data Structures in Java
+Author: Alice Brown
+Price: 19.99
+```
+
+---
+
+#### **Assignment 2 - Part (b) Output**
+
+**Search by Author**:
+If the user searches for books by "Alice Brown," the output will be:
+
+```plaintext
+Enter the author to search for: Alice Brown
+
+Books by Alice Brown:
+Title: Java Programming Basics
+Price: 29.99
+
+Title: Data Structures in Java
+Price: 19.99
+```
+
+**Sorting by Price**:
+Before sorting:
+```plaintext
+Books before sorting by price:
+Title: Java Programming Basics
+Price: 29.99
+
+Title: Advanced Java
+Price: 39.99
+
+Title: Data Structures in Java
+Price: 19.99
+```
+
+After calling `sortBooksByPrice()`, the sorted list will be:
+
+```plaintext
+Books after sorting by price:
+Title: Data Structures in Java
+Price: 19.99
+
+Title: Java Programming Basics
+Price: 29.99
+
+Title: Advanced Java
+Price: 39.99
+```
+
+---
+
+### Midterm Assignment 3: Inheritance and Polymorphism (20 Points)
+
+**Objective**: To assess understanding of inheritance, polymorphism, and runtime type-checking by creating and managing a collection of media items.
+
+#### Task
+
+1. **Create a Base Class**: `Media`
+    - **Attributes**:
+        - `title` (String)
+        - `creator` (String) – represents the creator (e.g., author or director)
+    - **Method**:
+        - `displayInfo()`: Prints the title and creator of the media.
+
+2. **Create Derived Classes**:
+    - **Book** extends `Media`:
+        - **Additional Attribute**: `numPages` (int)
+        - **Unique Method**: `readSample()`: Prints a message indicating that the sample pages are available to read.
+        - **Override** `displayInfo()` to include the number of pages.
+
+    - **Movie** extends `Media`:
+        - **Additional Attribute**: `duration` (double) representing duration in minutes.
+        - **Unique Method**: `watchTrailer()`: Prints a message indicating that a trailer is available to watch.
+        - **Override** `displayInfo()` to include the duration.
+
+3. **Polymorphic Display and Type-Specific Methods**:
+    - In the `Library` class, add a `displayAllMedia()` method that accepts an array of `Media` objects and displays each item’s info.
+    - **Type-Checking**:
+        - As you traverse the `Media[]` array, check each object’s type.
+        - If the object is a `Book`, call its `readSample()` method.
+        - If the object is a `Movie`, call its `watchTrailer()` method.
+
+4. **Example Usage**:
+    - Create instances of `Book` and `Movie`, store them in a `Media[]` array, and use `displayAllMedia()` to print each media’s details.
+    - Ensure `displayAllMedia()` also calls `readSample()` for `Book` objects and `watchTrailer()` for `Movie` objects as it traverses the array.
+
+**Expected Output** (Example):
+
+```plaintext
+Title: Java Essentials
+Creator: Alice Johnson
+Pages: 320
+Sample: Sample pages are available to read.
+
+Title: Learning AI
+Creator: Bob Smith
+Duration: 120 minutes
+Trailer: Watch the trailer available.
+
+Title: Effective Programming
+Creator: Carol White
+Pages: 450
+Sample: Sample pages are available to read.
+```
+
+### Grading Breakdown
+
+- **Assignment 1**: 15 points
+- **Assignment 2**: 25 points, divided as:
+    - Part (a): 10 points
+    - Part (b): 15 points
+- **Assignment 3**: 20 points
+
