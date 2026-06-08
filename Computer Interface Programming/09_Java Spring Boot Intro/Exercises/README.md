@@ -1,8 +1,8 @@
-\# Spring REST Basics
+# Spring REST Basics
 
 
 
-\## Introduction
+## Introduction
 
 Spring REST is part of the Spring Framework, which facilitates the creation of RESTful web services. 
 
@@ -10,13 +10,13 @@ It leverages the Spring MVC framework to handle HTTP requests and seamlessly int
 
 
 
-\## Setting Up a Basic Project
+## Setting Up a Basic Project
 
 To set up a basic Spring REST project, you can use Spring Boot, which simplifies the configuration and setup process.
 
 
 
-\### Dependencies
+### Dependencies
 
 Include the following dependencies in your `pom.xml` if you are using Maven:
 
@@ -36,8 +36,10 @@ Include the following dependencies in your `pom.xml` if you are using Maven:
 
 </dependencies>
 
-Spring Boot - Spring core
-Exercise 1:
+```
+## Spring Boot - Spring core
+
+#### Exercise 1:
 Take the code from the example project
 https://github.com/marjanuacs/cip-exercises-for-class-and-home/tree/main/Class8/example/JPA
 create Rest controller for BookStore and provide endpoints for :
