@@ -1,8 +1,8 @@
-\# Spring Boot MVC Assignment – Course Management System
+# Spring Boot MVC Assignment – Course Management System
 
 
 
-\## Assignment Description
+## Assignment Description
 
 
 
@@ -10,15 +10,15 @@ Create a Spring Boot application called \*\*CourseManagementSystem\*\* using:
 
 
 
-\- Spring Boot
+- Spring Boot
 
-\- Spring MVC
+- Spring MVC
 
-\- Spring Data JPA
+- Spring Data JPA
 
-\- Hibernate
+- Hibernate
 
-\- H2 In-Memory Database
+- H2 In-Memory Database
 
 
 
@@ -26,31 +26,31 @@ The application should follow the MVC architecture and contain:
 
 
 
-\- Controllers
+- Controllers
 
-\- Services
+- Services
 
-\- Repositories
+- Repositories
 
-\- Entities
+- Entities
 
-\- DTOs (optional)
+- DTOs (optional)
 
-\- Exception handling
+- Exception handling
 
-\- Hardcoded token security filter
-
-
-
-\---
+- Hardcoded token security filter
 
 
 
-\# Functional Requirements
+---
 
 
 
-\## Entities
+# Functional Requirements
+
+
+
+## Entities
 
 
 
@@ -58,43 +58,43 @@ Create the following entities:
 
 
 
-\### Student
+### Student
 
 
 
 Fields:
 
-\- id
+- id
 
-\- firstName
+- firstName
 
-\- lastName
+- lastName
 
-\- email
+- email
 
 
 
-\### Course
+### Course
 
 
 
 Fields:
 
-\- id
+- id
 
-\- title
+- title
 
-\- description
+- description
 
-\- duration
-
-
-
-\---
+- duration
 
 
 
-\# Relationship
+---
+
+
+
+# Relationship
 
 
 
@@ -102,17 +102,17 @@ Implement a \*\*Many-to-Many\*\* relationship:
 
 
 
-\- One student can enroll in many courses
+- One student can enroll in many courses
 
-\- One course can contain many students
-
-
-
-\---
+- One course can contain many students
 
 
 
-\# Repository Layer
+---
+
+
+
+# Repository Layer
 
 
 
@@ -120,9 +120,9 @@ Create repositories for:
 
 
 
-\- StudentRepository
+- StudentRepository
 
-\- CourseRepository
+- CourseRepository
 
 
 
@@ -138,11 +138,11 @@ JpaRepository
 
 
 
-\---
+---
 
 
 
-\# Service Layer
+# Service Layer
 
 
 
@@ -150,7 +150,7 @@ Create services with business logic.
 
 
 
-\## StudentService Methods
+## StudentService Methods
 
 
 
@@ -158,23 +158,23 @@ Implement:
 
 
 
-\- getAllStudents()
+- getAllStudents()
 
-\- getStudentById(Long id)
+- getStudentById(Long id)
 
-\- createStudent(Student student)
+- createStudent(Student student)
 
-\- updateStudent(Long id, Student student)
+- updateStudent(Long id, Student student)
 
-\- deleteStudent(Long id)
+- deleteStudent(Long id)
 
-\- enrollStudentToCourse(Long studentId, Long courseId)
+- enrollStudentToCourse(Long studentId, Long courseId)
 
-\- removeStudentFromCourse(Long studentId, Long courseId)
+- removeStudentFromCourse(Long studentId, Long courseId)
 
 
 
-\## CourseService Methods
+## CourseService Methods
 
 
 
@@ -182,23 +182,23 @@ Implement:
 
 
 
-\- getAllCourses()
+- getAllCourses()
 
-\- getCourseById(Long id)
+- getCourseById(Long id)
 
-\- createCourse(Course course)
+- createCourse(Course course)
 
-\- updateCourse(Long id, Course course)
+- updateCourse(Long id, Course course)
 
-\- deleteCourse(Long id)
-
-
-
-\---
+- deleteCourse(Long id)
 
 
 
-\# Controller Layer
+---
+
+
+
+# Controller Layer
 
 
 
@@ -206,7 +206,7 @@ Create REST controllers.
 
 
 
-\## StudentController Endpoints
+## StudentController Endpoints
 
 
 
@@ -230,7 +230,7 @@ Create REST controllers.
 
 
 
-\## CourseController Endpoints
+## CourseController Endpoints
 
 
 
@@ -250,11 +250,11 @@ Create REST controllers.
 
 
 
-\---
+---
 
 
 
-\# Security Requirement
+# Security Requirement
 
 
 
@@ -262,11 +262,11 @@ Secure all endpoints using a hardcoded token.
 
 
 
-\## Requirements
+## Requirements
 
 
 
-\- Every request must contain header:
+- Every request must contain header:
 
 
 
@@ -278,7 +278,7 @@ Authorization: Bearer secret-token-123
 
 
 
-\- If token is missing or invalid return:
+- If token is missing or invalid return:
 
 
 
@@ -294,15 +294,15 @@ Implement security using:
 
 
 
-\- OncePerRequestFilter
+- OncePerRequestFilter
 
 
 
-\---
+---
 
 
 
-\# H2 Database
+# H2 Database
 
 
 
@@ -314,17 +314,17 @@ Configure:
 
 
 
-\- H2 Console
+- H2 Console
 
-\- Hibernate auto create-drop
-
-
-
-\---
+- Hibernate auto create-drop
 
 
 
-\# Bonus Requirements
+---
+
+
+
+# Bonus Requirements
 
 
 
@@ -332,19 +332,19 @@ Add:
 
 
 
-\- Global exception handling
+- Global exception handling
 
-\- Validation annotations
+- Validation annotations
 
-\- Proper HTTP status codes
-
-
-
-\---
+- Proper HTTP status codes
 
 
 
-\# Expected Project Structure
+---
+
+
+
+# Expected Project Structure
 
 
 
