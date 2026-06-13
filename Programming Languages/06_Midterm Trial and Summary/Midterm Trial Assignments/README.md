@@ -1,4 +1,4 @@
-#Midterm Preparation
+# Midterm Trial
 
 ### Midterm Assignment 1: Basic Java Program (15 Points)
 
