@@ -1,9 +1,8 @@
 # Computer Interface Programmuing
 
 ### Subject Outline
-Gain a solid foundation and comprehension of the fundamental concepts of computer interface programming with Java. You will acquire a working knowledge of file and folder handling,
-thread management, socket-based network communication, and the creation and consumption of JSON documents.
-Additionally, you will be introduced to the Java Spring Boot framework through a hands-on project that will be built from scratch, providing you with a basic understanding of its capabilities.
+Gain a solid foundation and comprehension of the fundamental concepts of computer interface programming with Java. You will acquire a working knowledge of file and folder handling, thread management, socket-based network communication, and the creation and consumption of JSON documents.
+Additionally, you will be introduced to the Java Spring Boot framework through a [hands-on project](https://github.com/QuiteNew/Charity-Donation-Tracker) that will be built from scratch, providing you with a basic understanding of its capabilities.
 
 ### Objectives/Intended learning outcomes
 #### 1. Knowledge and Understanding
