@@ -1,3 +1,5 @@
+#Midterm Preparation
+
 ### Midterm Assignment 1: Basic Java Program (15 Points)
 
 **Objective**: Create a simple Java program, handle inputs, and use basic conditionals.
