@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOM Playground — Exercise 7</title>
+<style>
+  body {
+    font-family: system-ui, Segoe UI, Arial, sans-serif;
+    max-width: 44rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+  #box {
+    border: 1px solid #999;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  /* Exercise 7.3 asks you to add this class from JavaScript. */
+  .highlight {
+    background: #ffe08a;
+    border-color: #d19b00;
+  }
+  #list { padding-left: 1.25rem; }
+  #list .item { cursor: pointer; }
+  #output {
+    min-height: 1.5rem;
+    padding: 0.5rem;
+    background: #f2f2f2;
+    font-family: Consolas, monospace;
+  }
+  .controls { display: flex; gap: 0.5rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+
+  <h1 id="title">DOM Playground</h1>
+  <p id="subtitle">Change me from the console.</p>
+
+  <img id="logo" width="80" height="80" alt="placeholder logo"
+       src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' fill='%234a7ebb'/><text x='40' y='50' font-size='34' fill='white' text-anchor='middle' font-family='sans-serif'>JS</text></svg>">
+
+  <div id="box">
+    <p>This box is the target for exercise 7.3.</p>
+  </div>
+
+  <p><a id="link" href="https://developer.mozilla.org">MDN Web Docs</a></p>
+
+  <ul id="list">
+    <li class="item">Alpha</li>
+    <li class="item">Beta</li>
+    <li class="item">Gamma</li>
+    <li class="item">Delta</li>
+    <li class="item">Epsilon</li>
+  </ul>
+
+  <div class="controls">
+    <input id="input" type="text" placeholder="Type something...">
+    <button id="btn">Click me</button>
+  </div>
+
+  <div id="output"></div>
+
+<script>
+  // Exercise 7: write your code here once it works in the console.
+</script>
+
+</body>
+</html>

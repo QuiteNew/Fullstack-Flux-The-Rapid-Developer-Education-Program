@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- The <title> is NOT shown on the page. It is the browser tab, the bookmark
+     name, and the blue line in a search result. Every page needs one. -->
+<title>My First Web Page — Exercise 2</title>
+
+<!-- Ignore this block for now; styling is CSS, and CSS comes in a later lecture.
+     It is here only so the page is comfortable to read. -->
+<style>
+  body {
+    font-family: system-ui, Segoe UI, Arial, sans-serif;
+    max-width: 44rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    line-height: 1.5;
+  }
+  footer { margin-top: 2rem; border-top: 1px solid #ccc; padding-top: 1rem; }
+</style>
+</head>
+<body>
+
+  <!-- ===== Headings =====
+       h1 to h6 are levels, not sizes. Use one h1 for the page subject, then
+       h2 for its sections, h3 for subsections. Never skip a level to get a
+       smaller font — that is what CSS is for. Screen readers and search
+       engines read this structure as the outline of your document. -->
+  <h1>My First Web Page</h1>
+
+  <p>
+    Everything you see here is plain text marked up with <em>tags</em>. The browser
+    reads those tags and decides what each piece of text <strong>is</strong> — a
+    heading, a paragraph, a link — and then draws it accordingly.
+  </p>
+
+  <!-- ===== Navigation: links to places inside this same page =====
+       An href starting with # jumps to the element with that id. -->
+  <h2 id="contents">Contents</h2>
+  <ul>
+    <li><a href="#about">About this page</a></li>
+    <li><a href="#paragraphs">How paragraphs work</a></li>
+    <li><a href="#links">The three kinds of link</a></li>
+  </ul>
+
+  <h2 id="about">About this page</h2>
+
+  <p>
+    This file exists to show the four things every HTML document is built from: a
+    title, headings, paragraphs, and links. Open it in a browser, then open the
+    file itself in your editor and read the two side by side.
+  </p>
+
+  <p>
+    Then press <kbd>Ctrl</kbd>+<kbd>U</kbd> in the browser. That is the exact text
+    the server sent — there is no hidden layer underneath it.
+  </p>
+
+  <h2 id="paragraphs">How paragraphs work</h2>
+
+  <p>
+    A paragraph is a <code>&lt;p&gt;</code> element. It starts on a new line and gets
+    space above and below it, automatically.
+  </p>
+
+  <p>
+    This is a second paragraph, so it is separate from the first one. Notice what
+    HTML does <em>not</em> care about:
+    pressing            Enter,
+    or         adding many spaces,
+    changes nothing. Whitespace in the source collapses into a single space. If you
+    want a new paragraph, you write a new <code>&lt;p&gt;</code>.
+  </p>
+
+  <h3>Inside a paragraph</h3>
+
+  <p>
+    Some tags mark up a piece of text rather than a block of it:
+    <strong>strong</strong> for importance, <em>em</em> for emphasis,
+    <code>code</code> for code, and <a href="#links">a link</a> for a link.
+  </p>
+
+  <h2 id="links">The three kinds of link</h2>
+
+  <p>
+    A link is an <code>&lt;a&gt;</code> element — "a" for <em>anchor</em>. Its
+    <code>href</code> attribute says where it goes, and the text between the tags is
+    what the reader clicks. There are three ways to write that destination.
+  </p>
+
+  <h3>1. Absolute — to another site</h3>
+  <p>
+    The full address, protocol included:
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN's HTML reference</a>.
+    Adding <code>target="_blank"</code> opens it in a new tab:
+    <a href="https://validator.w3.org/" target="_blank" rel="noopener">the W3C validator</a>.
+  </p>
+
+  <h3>2. Relative — to another file of your own</h3>
+  <p>
+    No protocol, no domain — just a path from where this file sits. This one points
+    at the other page in this folder:
+    <a href="dom-playground.html">the DOM playground</a>. Relative links keep working
+    when you move the whole folder to a server, which absolute ones do not.
+  </p>
+
+  <h3>3. Fragment — to a spot on a page</h3>
+  <p>
+    A <code>#</code> plus an <code>id</code>:
+    <a href="#contents">back to the contents</a>. Combine it with a path to land on a
+    specific section of a different page.
+  </p>
+
+  <p>
+    A link does not have to point at a web page at all. This one opens a mail client:
+    <a href="mailto:someone@example.com">send an email</a>.
+  </p>
+
+  <footer>
+    <p>
+      Written for Internet Programming, Group 1 — UACS 2026 — Exercise 2.
+      <a href="#contents">Back to top</a>
+    </p>
+  </footer>
+
+</body>
+</html>
