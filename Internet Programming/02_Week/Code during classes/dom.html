@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight { background-color: lightgreen; }
+    </style>
+</head>
+<body>
+    <h1>Manipulating DOM</h1>
+
+    <p id="intro">This text will be replaced.</p>
+
+    <ul id="fruits">
+        <li>Apple</li>
+        <li class="remove-me">Banana</li>
+        <li>Cherry</li>
+    </ul>
+
+    <a id="link" href="#">A link</a>
+
+    <div>
+        <input id="fruit-input" type="text" placeholder="New fruit">
+        <button id="add-button">Add fruit</button>
+        <button id="remove-button">Remove last fruit</button>
+        <button id="toggle-button">Toggle highlight</button>
+        <button id="color-button">Random heading color</button>
+    </div>
+
+    <script>
+        // 1. Selecting elements
+        const heading = document.querySelector("h1");
+        const intro = document.getElementById("intro");
+        const list = document.querySelector("#fruits");
+        const items = document.querySelectorAll("#fruits li");
+        console.log(`Found ${items.length} list items`);
+
+        // 2. Changing text and content
+        heading.textContent = "Manipulating DOM (changed by JavaScript)";
+        intro.innerHTML = "This paragraph was <strong>rewritten</strong> on page load.";
+
+        // 3. Modifying attributes
+        const link = document.getElementById("link");
+        link.setAttribute("href", "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model");
+        link.setAttribute("target", "_blank");
+        link.textContent = "MDN: Document Object Model";
+
+        // 4. Adding elements
+        const newItem = document.createElement("li");
+        newItem.textContent = "Date (added by JavaScript)";
+        list.appendChild(newItem);
+
+        // 5. Removing elements
+        document.querySelector(".remove-me").remove();
+
+        // 6. Styling elements
+        heading.style.color = "darkblue";
+        intro.style.backgroundColor = "lightyellow";
+        intro.style.padding = "8px";
+        newItem.classList.add("highlight");
+        newItem.style.fontWeight = "bold";
+
+        // 7. Looping over a NodeList
+        document.querySelectorAll("#fruits li").forEach((li, index) => {
+            li.textContent = `${index + 1}. ${li.textContent}`;
+        });
+
+        // 8. Responding to button clicks
+        const fruitInput = document.getElementById("fruit-input");
+
+        document.getElementById("add-button").addEventListener("click", () => {
+            const name = fruitInput.value.trim();
+            if (name === "") {
+                return;
+            }
+            const li = document.createElement("li");
+            li.textContent = `${list.children.length + 1}. ${name}`;
+            list.appendChild(li);
+            fruitInput.value = "";
+        });
+
+        document.getElementById("remove-button").addEventListener("click", () => {
+            //if (list.lastElementChild) {
+                list.lastElementChild?.remove();
+            //}
+        });
+
+        document.getElementById("toggle-button").addEventListener("click", () => {
+            heading.classList.toggle("highlight");
+        });
+
+        document.getElementById("color-button").addEventListener("click", (event) => {
+            const hue = Math.floor(Math.random() * 360);
+            heading.style.color = `hsl(${hue}, 70%, 40%)`;
+            console.log(`${event.target.textContent} clicked, hue = ${hue}`);
+        });
+    </script>
+</body>
+</html>
