@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<title>Autumn</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7aa6c9"/><stop offset="1" stop-color="#f3dcb5"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/>
+<circle cx="875" cy="230" r="70" fill="#fff0c8"/>
+<path d="M0 800 L0 470 L0 317 L150 395 L300 464 L450 331 L600 307 L750 437 L900 355 L1050 322 L1200 334 L1200 800 Z" fill="#b5652b"/>
+<path d="M0 800 L0 570 L0 483 L200 501 L400 493 L600 484 L800 488 L1000 508 L1200 536 L1200 800 Z" fill="#8a4520"/>
+<rect y="680" width="1200" height="120" fill="#5e2f17"/>
+</svg>

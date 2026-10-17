@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<title>Noon</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b8fd9"/><stop offset="1" stop-color="#bfe3ff"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/>
+<circle cx="934" cy="170" r="70" fill="#fff6c2"/>
+<path d="M0 800 L0 470 L0 399 L150 470 L300 424 L450 366 L600 354 L750 331 L900 438 L1050 340 L1200 389 L1200 800 Z" fill="#6c9c74"/>
+<path d="M0 800 L0 570 L0 521 L200 565 L400 510 L600 480 L800 465 L1000 567 L1200 539 L1200 800 Z" fill="#4c7d55"/>
+<rect y="680" width="1200" height="120" fill="#3a6644"/>
+</svg>

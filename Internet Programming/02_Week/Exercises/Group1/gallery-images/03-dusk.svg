@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<title>Dusk</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d1f4f"/><stop offset="1" stop-color="#f2706b"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/>
+<circle cx="950" cy="520" r="70" fill="#ffc58a"/>
+<path d="M0 800 L0 470 L0 395 L150 360 L300 432 L450 443 L600 358 L750 351 L900 457 L1050 467 L1200 447 L1200 800 Z" fill="#6b2f4f"/>
+<path d="M0 800 L0 570 L0 501 L200 485 L400 542 L600 562 L800 530 L1000 506 L1200 461 L1200 800 Z" fill="#45203a"/>
+<rect y="680" width="1200" height="120" fill="#2c1528"/>
+</svg>

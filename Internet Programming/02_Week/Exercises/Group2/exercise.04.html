@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 02 - Exercise 04</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="exercise.04.js" defer></script>
+</head>
+<body>
+    <h1>To Do List</h1>
+
+    <form id="add-form">
+        <label for="new-task">New task</label>
+        <input id="new-task" type="text" autocomplete="off">
+        <button type="submit">Add</button>
+    </form>
+
+    <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="done">Done</button>
+    </div>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <p id="counter"></p>
+
+    <button id="clear-completed">Clear completed</button>
+</body>
+</html>

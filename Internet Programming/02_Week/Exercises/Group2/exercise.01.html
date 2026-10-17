@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 02 - Exercise 01</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="exercise.01.js" defer></script>
+</head>
+<body>
+    <h1>Select and Modify Elements</h1>
+
+    <p id="intro">This page is used to practise selecting and modifying DOM elements.</p>
+
+    <ul id="list">
+        <li class="item" data-count="0">First item</li>
+        <li class="item" data-count="0">Second item</li>
+        <li class="item" data-count="0">Third item</li>
+        <li class="item" data-count="0">Fourth item</li>
+        <li class="item" data-count="0">Fifth item</li>
+    </ul>
+
+    <img src="gallery-images/01-dawn.svg" alt="Dawn landscape">
+
+    <a id="link" href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">MDN: Document Object Model</a>
+
+    <div id="output"></div>
+
+    <section>
+        <h2>1.2 — Five ways to select</h2>
+        <button id="select-button">Run all six selections</button>
+        <button id="map-button">Try .map() on a NodeList</button>
+    </section>
+
+    <section>
+        <h2>1.3 — Live versus static</h2>
+        <button id="live-button">Append an item and compare lengths</button>
+    </section>
+
+    <section>
+        <h2>1.4 — textContent versus innerHTML</h2>
+        <button id="bold-text-button">Bold with textContent</button>
+        <button id="bold-html-button">Bold with innerHTML</button>
+        <button id="img-html-button">&lt;img onerror&gt; with innerHTML</button>
+        <button id="img-text-button">&lt;img onerror&gt; with textContent</button>
+        <button id="script-html-button">&lt;script&gt; with innerHTML</button>
+        <button id="clear-output-button">Clear output</button>
+    </section>
+
+    <section>
+        <h2>1.5 — Attributes and data</h2>
+        <button id="image-button">Change the image</button>
+        <button id="link-button">Point the link to MDN</button>
+        <button id="href-button">Compare href and getAttribute("href")</button>
+        <p>Click any list item to increase its count.</p>
+    </section>
+
+    <section>
+        <h2>1.6 — Styling two ways</h2>
+        <button id="inline-style-button">Background with element.style</button>
+        <button id="class-style-button">Background with a class</button>
+        <button id="gray-rule-button">Add the h1 { background: gray; } rule</button>
+        <button id="reset-heading-button">Reset the heading</button>
+    </section>
+
+    <section>
+        <h2>1.7 — The whitespace trap</h2>
+        <button id="whitespace-button">Compare childNodes and children</button>
+    </section>
+</body>
+</html>

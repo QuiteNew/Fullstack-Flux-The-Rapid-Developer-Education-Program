@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+<title>Dawn</title>
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b3a67"/><stop offset="1" stop-color="#f6a96b"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/>
+<circle cx="848" cy="560" r="70" fill="#ffe3a3"/>
+<path d="M0 800 L0 470 L0 370 L150 408 L300 410 L450 390 L600 343 L750 400 L900 351 L1050 343 L1200 381 L1200 800 Z" fill="#5a4a6e"/>
+<path d="M0 800 L0 570 L0 462 L200 458 L400 458 L600 554 L800 490 L1000 508 L1200 500 L1200 800 Z" fill="#3d3350"/>
+<rect y="680" width="1200" height="120" fill="#2a2338"/>
+</svg>

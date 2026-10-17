@@ -1,0 +1,246 @@
+/* Shared styles for the Lecture 02 exercises */
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    color: #222;
+    background-color: #fafafa;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0b5cad;
+}
+
+button {
+    font: inherit;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+    padding: 4px 8px;
+}
+
+#output {
+    min-height: 1.5em;
+    margin-top: 16px;
+    padding: 8px;
+    border: 1px dashed #999;
+}
+
+/* Classes toggled from JavaScript with classList */
+
+.highlight {
+    background-color: lightyellow;
+}
+
+/* !important so it also hides elements whose own rule sets display (e.g. .overlay) */
+.hidden {
+    display: none !important;
+}
+
+.active {
+    outline: 3px solid #0b5cad;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.error {
+    color: #c00;
+    font-size: 0.9em;
+}
+
+.invalid {
+    border: 2px solid #c00;
+}
+
+/* Exercise 2 — Interactive Forms */
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row label {
+    display: block;
+    font-weight: 600;
+}
+
+.form-row .error {
+    display: block;
+    min-height: 1.2em;
+}
+
+.checkbox-row label {
+    display: inline;
+    font-weight: normal;
+}
+
+.strength {
+    font-size: 0.9em;
+}
+
+.strength-weak {
+    color: #c00;
+}
+
+.strength-medium {
+    color: #b36b00;
+}
+
+.strength-strong {
+    color: #1a7f37;
+}
+
+.success {
+    padding: 12px;
+    border: 1px solid #1a7f37;
+    background-color: #e6f4ea;
+}
+
+/* Exercise 3 — Image Gallery */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+}
+
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.overlay-figure {
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+.overlay-figure img {
+    max-width: 75vw;
+    max-height: 80vh;
+}
+
+.overlay-counter {
+    margin-left: 8px;
+    opacity: 0.7;
+}
+
+.overlay-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.5em;
+}
+
+.overlay-nav {
+    font-size: 1.5em;
+}
+
+/* Exercise 4 — To Do List */
+
+.filters {
+    margin: 12px 0;
+}
+
+.filters button.active {
+    outline: none;
+    background-color: #0b5cad;
+    color: white;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.todo-list .text,
+.todo-list .edit {
+    flex: 1;
+}
+
+/* Exercise 5 — Basic Calculator */
+
+.calculator {
+    max-width: 320px;
+}
+
+.calc-display {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    text-align: right;
+    background-color: #222;
+    color: white;
+    border-radius: 4px;
+    overflow-wrap: anywhere;
+}
+
+.calc-expression {
+    min-height: 1.5em;
+    opacity: 0.7;
+}
+
+.calc-current {
+    font-size: 2em;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.keypad button {
+    padding: 16px 0;
+    font-size: 1.25em;
+}
+
+.keypad .wide {
+    grid-column: span 2;
+}
+
+.calc-history {
+    padding-left: 0;
+    list-style: none;
+}
+
+.calc-history button {
+    margin-bottom: 4px;
+}
