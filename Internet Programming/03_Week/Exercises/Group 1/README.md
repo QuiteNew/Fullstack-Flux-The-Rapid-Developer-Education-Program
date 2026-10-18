@@ -1,3 +1,5 @@
+**The "Online" exercises are the same for both groups which is why they are only here**
+
 # Internet Programming — Exercises #03
 
 Detailed tasks for the ten exercises in `Exercises03.pptx`, in slide order.

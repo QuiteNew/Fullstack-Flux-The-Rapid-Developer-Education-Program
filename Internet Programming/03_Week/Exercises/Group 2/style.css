@@ -1,0 +1,207 @@
+/* Shared styles for the Lecture 03 exercise pages */
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    color: #222;
+    background-color: #fafafa;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+a {
+    color: #0b5cad;
+}
+
+button {
+    font: inherit;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ---- Exercise 10 — Quiz ---- */
+
+.quiz {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px 20px;
+}
+
+.quiz-progress {
+    margin: 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.quiz-question {
+    margin: 8px 0 16px;
+    font-size: 1.25em;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 8px;
+}
+
+.option {
+    text-align: left;
+    padding: 10px 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.option:hover:not(:disabled) {
+    border-color: #0b5cad;
+}
+
+.option.correct {
+    border-color: #2e7d32;
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+.option.wrong {
+    border-color: #c62828;
+    background-color: #ffebee;
+    color: #b71c1c;
+}
+
+.option:disabled:not(.correct):not(.wrong) {
+    color: #888;
+}
+
+.quiz-feedback {
+    min-height: 1.5em;
+    font-weight: bold;
+}
+
+.quiz-hint {
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 0;
+}
+
+.quiz-wrong li {
+    margin-bottom: 6px;
+}
+
+.quiz-comment {
+    min-height: 1.5em;
+    margin-top: -8px;
+    font-style: italic;
+    color: #555;
+}
+
+.quiz-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.quiz-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.quiz-list a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: inherit;
+    text-decoration: none;
+}
+
+.quiz-list a:hover,
+.quiz-list a:focus {
+    border-color: #0b5cad;
+}
+
+.quiz-list span {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.quiz-problems {
+    color: #b71c1c;
+    padding-left: 20px;
+}
+
+.quiz-problems:empty {
+    display: none;
+}
+
+/* ---- Exercise runner ---- */
+
+.runner-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.runner-nav a {
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+.runner-nav a.active {
+    background-color: #0b5cad;
+    border-color: #0b5cad;
+    color: #fff;
+}
+
+.runner-summary {
+    font-weight: bold;
+}
+
+.runner-output {
+    background-color: #1e1e1e;
+    color: #ddd;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+    line-height: 1.4;
+    white-space: pre;
+}
+
+.runner-output .pass {
+    color: #81c784;
+}
+
+.runner-output .fail {
+    color: #ef9a9a;
+    font-weight: bold;
+}
+
+.runner-output .heading {
+    color: #90caf9;
+}
