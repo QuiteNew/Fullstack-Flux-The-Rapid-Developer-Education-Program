@@ -1,0 +1,167 @@
+// Quiz data — trick questions, where the name of the thing points the wrong way.
+// See quizzes/course.js for a description of the format.
+
+registerQuiz({
+    id: "tricky",
+    title: "Trick questions",
+    description: "The obvious answer is almost always wrong.",
+    questionsPerRound: 15,
+    questions: [
+        {
+            question: "Let's start easy. What material is pencil lead made of?",
+            options: ["Lead", "Graphite", "Charcoal", "Tin"],
+            answer: 1,
+            comment: "That whole poisoning thing didn't help lead's rep.",
+        },
+        {
+            question: "What kind of food is Boston Cream Pie?",
+            options: ["Pie", "Cake", "Pudding", "Custard tart"],
+            answer: 1,
+            comment: "The cake is a lie!!",
+        },
+        {
+            question: "What material is used to write on a chalkboard?",
+            options: ["Chalk", "Gypsum", "Clay", "Talc"],
+            answer: 1,
+            comment: "Chalk is no longer used.",
+        },
+        {
+            question: "What is tin foil made of?",
+            options: ["Tin", "Aluminum", "Steel", "Zinc"],
+            answer: 1,
+            comment: "Tin was the original answer. If you said foil, good effort.",
+        },
+        {
+            question: "Where did the English horn originate?",
+            options: ["England", "Germany", "Scotland", "Australia"],
+            answer: 1,
+            comment: "On a related note, it's also not a horn.",
+        },
+        {
+            question: "What type of animal is the horned toad?",
+            options: ["A toad", "A frog", "A lizard", "A salamander"],
+            answer: 2,
+            comment: "Don't tell TCU.",
+        },
+        {
+            question: "What kind of plant is a peanut?",
+            options: ["A nut", "A legume", "A grain", "A tuber"],
+            answer: 1,
+            comment: "Awww, nuts!",
+        },
+        {
+            question: "What is catgut made of?",
+            options: ["Cat intestine", "Sheep intestine", "Horsehair", "Silk"],
+            answer: 1,
+            comment: "Grumpy Cat is disappointed.",
+        },
+        {
+            question: "Where was Chinese checkers invented?",
+            options: ["China", "Germany", "Japan", "The United States"],
+            answer: 1,
+            comment: "Again with the Germans. Get it together, man!",
+        },
+        {
+            question: "How long was the Hundred Years' War?",
+            options: ["100 years", "116 years", "99 years", "150 years"],
+            answer: 1,
+            comment: "1337–1453, but I'm sure it only felt like a hundred years.",
+        },
+        {
+            question: "What country is home to China Lake?",
+            options: ["China", "The United States of America", "Canada", "Mongolia"],
+            answer: 1,
+            comment: "This one I understand. 'Murica.",
+        },
+        {
+            question: "What kind of animal is the titmouse?",
+            options: ["A mouse", "A bird", "A shrew", "A bat"],
+            answer: 1,
+            comment: "Put on safe search before Googling, kids.",
+        },
+        {
+            question: "How long was the Thirty Years' War?",
+            options: ["30 years", "33 years", "25 years", "40 years"],
+            answer: 0,
+            comment: "What are you talking about? How was that mean?",
+        },
+        {
+            question: "Who wrote Mozart's Third Symphony?",
+            options: ["Wolfgang Amadeus Mozart", "Carl Friedrich Abel", "Leopold Mozart", "Joseph Haydn"],
+            answer: 1,
+            comment: "Eight-year-old Mozart copied it out by hand to study it, and it got catalogued as his.",
+        },
+        {
+            question: "Which country do Panama hats come from?",
+            options: ["Panama", "Ecuador", "Mexico", "Spain"],
+            answer: 1,
+            comment: "They were shipped out through Panama, which took all the credit.",
+        },
+        {
+            question: "Which animal are the Canary Islands named after?",
+            options: ["Canaries", "Dogs", "Cats", "Parrots"],
+            answer: 1,
+            comment: "Latin canis. The birds were named after the islands, not the other way round.",
+        },
+        {
+            question: "In which month do Russians commemorate the October Revolution?",
+            options: ["October", "November", "September", "December"],
+            answer: 1,
+            comment: "Russia was still on the old Julian calendar — 13 days behind everyone else.",
+        },
+        {
+            question: "What was King George VI's first name?",
+            options: ["George", "Albert", "Edward", "Charles"],
+            answer: 1,
+            comment: "Family and friends called him Bertie.",
+        },
+        {
+            question: "What kind of animal is a koala bear?",
+            options: ["A bear", "A marsupial", "A rodent", "A primate"],
+            answer: 1,
+            comment: "Its closest living relative is the wombat. Unbearable, really.",
+        },
+        {
+            question: "What kind of insect is a firefly?",
+            options: ["A fly", "A beetle", "A moth", "A wasp"],
+            answer: 1,
+            comment: "Not a fly, and not on fire.",
+        },
+        {
+            question: "What is a guinea pig?",
+            options: ["A pig from Guinea", "A rodent from South America", "A rodent from Guinea", "A pig from South America"],
+            answer: 1,
+            comment: "Neither from Guinea nor a pig. Two for two.",
+        },
+        {
+            question: "What is the capital of Australia?",
+            options: ["Sydney", "Canberra", "Melbourne", "Perth"],
+            answer: 1,
+            comment: "Sydney and Melbourne couldn't agree, so they built a new city between them.",
+        },
+        {
+            question: "What is the largest desert in the world?",
+            options: ["The Sahara", "Antarctica", "The Gobi", "The Arabian Desert"],
+            answer: 1,
+            comment: "A desert is about how little rain falls, not how much sand there is.",
+        },
+        {
+            question: "How many animals of each kind did Moses take on the ark?",
+            options: ["One", "Two", "Seven", "None — it was Noah"],
+            answer: 3,
+            comment: "Read it again. Slowly.",
+        },
+        {
+            question: "How long did the Six-Day War last?",
+            options: ["Six days", "Six weeks", "Six months", "Six years"],
+            answer: 0,
+            comment: "Finally, a war that keeps its word.",
+        },
+        {
+            question: "How many legs does a centipede have?",
+            options: ["100", "Never exactly 100", "1000", "Always 42"],
+            answer: 1,
+            comment: "Centipedes always have an odd number of leg pairs, so 50 pairs is impossible.",
+        },
+    ],
+});
