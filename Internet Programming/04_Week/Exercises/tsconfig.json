@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // es2022, not esnext: with esnext, tsc leaves decorators (exercise 7) in the
+    // output as raw @ syntax, which Node cannot run yet.
+    "target": "es2022",
+    "module": "nodenext",
+
+    "strict": true,
+    // Reading arr[i] or obj[key] gives `T | undefined` — the key may be missing.
+    "noUncheckedIndexedAccess": true,
+
+    // Type-only imports must say so: import { type Book } from "./models.ts"
+    "verbatimModuleSyntax": true,
+    // Lets imports name the real .ts file; tsc rewrites them to .js in dist/.
+    "rewriteRelativeImportExtensions": true,
+    // Every file is its own module, so top-level names never clash between files.
+    "moduleDetection": "force",
+
+    "rootDir": ".",
+    "outDir": "dist",
+    "noEmitOnError": true,
+    "skipLibCheck": true
+  },
+  "include": ["*.ts", "exercise.08/**/*.ts"]
+}
