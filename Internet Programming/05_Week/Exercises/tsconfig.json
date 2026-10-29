@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "nodenext",
+    // Exercises 1-3 and serve.ts run in Node; exercises 4-6 run in the browser.
+    // So we want both sets of type declarations: the DOM (fetch, document, ...)
+    // and Node's (node:http, node:fs, process) from @types/node.
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "types": ["node"],
+
+    "strict": true,
+    // Reading arr[i] or obj[key] gives `T | undefined` — the key may be missing.
+    "noUncheckedIndexedAccess": true,
+
+    // Type-only imports must say so: import { type Joke } from "./jokes.ts"
+    "verbatimModuleSyntax": true,
+    // Lets imports name the real .ts file; tsc rewrites them to .js in dist/,
+    // which is what the browser loads.
+    "rewriteRelativeImportExtensions": true,
+    // Every file is its own module, so top-level names never clash between files.
+    "moduleDetection": "force",
+
+    "rootDir": ".",
+    "outDir": "dist",
+    "noEmitOnError": true,
+    "skipLibCheck": true
+  },
+  "include": ["*.ts", "exercise.04/**/*.ts", "exercise.05/**/*.ts", "exercise.06/**/*.ts"]
+}
