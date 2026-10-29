@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 05 — In which order?</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- The engine first, then one line per quiz. All deferred, so they run in
+         this order once the page is parsed. Opening this file from disk works. -->
+    <script src="quiz.js" defer></script>
+    <script src="quizzes/event-loop.js" defer></script>
+</head>
+<body>
+    <h1 id="title">Quiz Time!</h1>
+
+    <section id="menu" class="quiz hidden">
+        <p>Choose a quiz:</p>
+        <ul id="quiz-list" class="quiz-list"></ul>
+        <ul id="quiz-problems" class="quiz-problems"></ul>
+    </section>
+
+    <section id="quiz" class="quiz hidden">
+        <p id="progress" class="quiz-progress"></p>
+        <h2 id="question" class="quiz-question"></h2>
+        <pre id="code" class="quiz-code hidden"></pre>
+        <div id="options" class="quiz-options"></div>
+        <p id="feedback" class="quiz-feedback" aria-live="polite"></p>
+        <p id="comment" class="quiz-comment"></p>
+        <pre id="run-output" class="quiz-output hidden" aria-live="polite"></pre>
+        <p class="quiz-actions">
+            <button id="run-button" type="button" class="hidden">Run it</button>
+            <button id="next-button" type="button" class="hidden">Next</button>
+        </p>
+        <p class="quiz-hint">Keyboard: 1–4 to answer, R to run the code, Enter to continue.</p>
+    </section>
+
+    <section id="result" class="quiz hidden">
+        <h2>Your score: <span id="score"></span></h2>
+        <ul id="wrong-list" class="quiz-wrong"></ul>
+        <p class="quiz-actions">
+            <button id="restart-button" type="button">Play again</button>
+            <a href="index.html">Choose another quiz</a>
+        </p>
+    </section>
+</body>
+</html>
