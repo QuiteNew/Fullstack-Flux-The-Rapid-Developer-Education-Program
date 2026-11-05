@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 5 — State, pure functions, render</title>
+    <style>
+        :root { color-scheme: light; }
+        body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; background: #fff; color: #222; }
+        table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+        th, td { text-align: left; padding: 0.4rem 0.6rem; border-bottom: 1px solid #ddd; }
+        th { cursor: pointer; user-select: none; background: #f4f4f4; }
+        th .arrow { color: #aaa; }
+        th.sorted .arrow { color: #000; }
+        .filters { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+        input, select { font: inherit; padding: 0.3rem; }
+        pre { background: #1e1e1e; color: #e6e6e6; padding: 0.6rem 0.8rem; border-radius: 6px; font-size: 0.85rem; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>State → pure functions → render</h1>
+    <p>A sortable, filterable table in three parts. The data, the filters and the sort column
+        are one <code>state</code> object. Pure functions turn the state into rows. One
+        <code>render()</code> draws the rows. Every event changes the state and calls
+        <code>render()</code> — nothing else touches the page. (The Lecture 03 quiz engine
+        works the same way.)</p>
+
+    <div class="filters">
+        <label>Name <input id="name" placeholder="part of a name"></label>
+        <label>Nationality <select id="nationality"><option value="">all</option></select></label>
+        <label><input id="alive" type="checkbox"> alive only</label>
+    </div>
+    <table>
+        <thead><tr id="headers"></tr></thead>
+        <tbody id="rows"></tbody>
+    </table>
+    <p id="count"></p>
+    <p>The current state:</p>
+    <pre id="state"></pre>
+
+    <script>
+        // ---- 1. State: everything the page shows depends only on this ----
+        const state = {
+            authors: [
+                { name: "Kazuo Ishiguro", nationality: "British", born: 1954, alive: true, books: 9 },
+                { name: "Ursula K. Le Guin", nationality: "American", born: 1929, alive: false, books: 23 },
+                { name: "Hilary Mantel", nationality: "British", born: 1952, alive: false, books: 12 },
+                { name: "Ted Chiang", nationality: "American", born: 1967, alive: true, books: 2 },
+                { name: "Olga Tokarczuk", nationality: "Polish", born: 1962, alive: true, books: 11 },
+                { name: "Stanisław Lem", nationality: "Polish", born: 1921, alive: false, books: 30 },
+            ],
+            filters: { name: "", nationality: "", aliveOnly: false },
+            sort: { key: "name", ascending: true },
+        };
+
+        const columns = [
+            { key: "name", label: "Name" },
+            { key: "nationality", label: "Nationality" },
+            { key: "born", label: "Born" },
+            { key: "alive", label: "Alive" },
+            { key: "books", label: "Books" },
+        ];
+
+        // ---- 2. Pure functions: data in, data out, nothing else ----
+        const matches = (filters) => (author) =>
+            author.name.toLowerCase().includes(filters.name.trim().toLowerCase())
+            && (filters.nationality === "" || author.nationality === filters.nationality)
+            && (!filters.aliveOnly || author.alive);
+
+        const by = (key, ascending) => (a, b) => {
+            const result = typeof a[key] === "string" ? a[key].localeCompare(b[key]) : Number(a[key]) - Number(b[key]);
+            return ascending ? result : -result;
+        };
+
+        const visibleRows = (s) => s.authors.filter(matches(s.filters)).toSorted(by(s.sort.key, s.sort.ascending));
+
+        const nationalities = (authors) => [...new Set(authors.map((a) => a.nationality))].sort();
+
+        // ---- 3. Render: the only code that writes to the page ----
+        const $ = (id) => document.getElementById(id);
+
+        function render() {
+            $("headers").replaceChildren(...columns.map(({ key, label }) => {
+                const th = document.createElement("th");
+                const sorted = state.sort.key === key;
+                th.className = sorted ? "sorted" : "";
+                th.dataset.key = key;
+                th.innerHTML = `${label} <span class="arrow">${sorted && !state.sort.ascending ? "▼" : "▲"}</span>`;
+                return th;
+            }));
+
+            const rows = visibleRows(state);
+            $("rows").replaceChildren(...rows.map((author) => {
+                const tr = document.createElement("tr");
+                for (const { key } of columns) {
+                    const td = document.createElement("td");
+                    td.textContent = key === "alive" ? (author.alive ? "✓" : "") : author[key];
+                    tr.append(td);
+                }
+                return tr;
+            }));
+
+            $("count").textContent = `Showing ${rows.length} of ${state.authors.length} authors`;
+            $("state").textContent = JSON.stringify({ filters: state.filters, sort: state.sort }, null, 2);
+        }
+
+        // ---- Events: change the state, then render ----
+        $("nationality").append(...nationalities(state.authors).map((n) => new Option(n, n)));
+
+        $("name").addEventListener("input", (e) => { state.filters.name = e.target.value; render(); });
+        $("nationality").addEventListener("change", (e) => { state.filters.nationality = e.target.value; render(); });
+        $("alive").addEventListener("change", (e) => { state.filters.aliveOnly = e.target.checked; render(); });
+
+        // One listener for all the headers (event delegation, Lecture 02).
+        $("headers").addEventListener("click", (e) => {
+            const th = e.target.closest("th");
+            if (!th) return;
+            const key = th.dataset.key;
+            state.sort = { key, ascending: state.sort.key === key ? !state.sort.ascending : true };
+            render();
+        });
+
+        render();
+    </script>
+</body>
+</html>

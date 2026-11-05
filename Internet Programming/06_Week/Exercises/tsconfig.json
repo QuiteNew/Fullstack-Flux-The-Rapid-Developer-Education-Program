@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    // Same settings as Lecture 04 and 05. es2022 keeps class fields and #private
+    // as they are, so the compiled code looks like the code you wrote.
+    "target": "es2022",
+    "module": "nodenext",
+
+    "strict": true,
+    // Reading arr[i] or obj[key] gives `T | undefined` — the key may be missing.
+    "noUncheckedIndexedAccess": true,
+
+    "verbatimModuleSyntax": true,
+    "rewriteRelativeImportExtensions": true,
+    // Every file is its own module, so top-level names never clash between files.
+    "moduleDetection": "force",
+
+    "rootDir": ".",
+    "outDir": "dist",
+    "noEmitOnError": true,
+    "skipLibCheck": true
+  },
+  "include": ["*.ts"]
+}
