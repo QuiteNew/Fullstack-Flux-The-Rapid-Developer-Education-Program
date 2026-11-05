@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 — Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- The browser runs the compiled JavaScript, not the .ts file.
+         type="module" allows import/export, and also defers the script until the page is parsed. -->
+    <script type="module" src="../dist/exercise.04/main.js"></script>
+</head>
+<body>
+<main>
+    <h1>Chuck Norris Jokes</h1>
+    <p class="hint">Data from <a href="https://api.chucknorris.io">api.chucknorris.io</a>.
+        Run <code>npx tsc</code> after every change, and refresh.</p>
+
+    <div id="error" class="error" role="alert" hidden></div>
+
+    <section class="card">
+        <p id="joke" class="joke" aria-live="polite"></p>
+        <p id="joke-category" class="hint"></p>
+        <div class="row">
+            <label for="category">Category</label>
+            <select id="category">
+                <option value="">any</option>
+            </select>
+            <button id="another" type="button">Another joke</button>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Search</h2>
+        <form id="search-form">
+            <input id="search-input" type="search" placeholder="e.g. computer" minlength="3" maxlength="120" required>
+            <button id="search-button" type="submit">Search</button>
+        </form>
+        <p id="search-status" class="status" aria-live="polite"></p>
+        <ul id="results" class="results"></ul>
+    </section>
+</main>
+</body>
+</html>
